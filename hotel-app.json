@@ -1,0 +1,224 @@
+{
+  "uuid": "49c7c409-b021-42fb-b8b9-261d5c501014",
+  "lastMigration": 32,
+  "name": "Hotel app",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "e67d645b-93b5-426e-96df-ffb678af588f",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "reservations",
+      "responses": [
+        {
+          "uuid": "0422048c-f17c-41d9-bcc3-052c70e05764",
+          "body": "[\n  {\n    \"id\" : 1,\n    \"guestName\" : \"Jannick\",\n    \"guestEmail\" : \"Jannick@email.com\",\n    \"roomNumber\" : 100,\n    \"checkInDate\" : \"2023-08-08\",\n    \"checkOutDate\" : \"2023-08-09\"\n  },\n  {\n    \"id\" : 2,\n    \"guestName\" : \"Maria\",\n    \"guestEmail\" : \"Maria@email.com\",\n    \"roomNumber\" : 101,\n    \"checkInDate\" : \"2023-08-09\",\n    \"checkOutDate\" : \"2023-08-10\"\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "41f382c1-ff58-4902-8d1e-45df0864675c",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "reservations/:id",
+      "responses": [
+        {
+          "uuid": "d117c142-863b-4983-b3f6-2b0d2a0da14c",
+          "body": "{\n    \"id\" : 1,\n    \"guestName\" : \"Jannick\",\n    \"guestEmail\" : \"Jannick@email.com\",\n    \"roomNumber\" : 100,\n    \"checkInDate\" : \"2023-08-08\",\n    \"checkOutDate\" : \"2023-08-09\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "ef840577-c234-4e18-bf4e-1a737612fddc",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "reservations/:id",
+      "responses": [
+        {
+          "uuid": "f4fb885c-93e0-4750-9b71-da92e22933ef",
+          "body": "",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "79459f71-e570-4435-a3c2-d795355f3bc6",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "reservations",
+      "responses": [
+        {
+          "uuid": "dee5156d-188d-431c-89bb-f38211c538ae",
+          "body": "",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "48d03cb7-d9de-4281-a3ae-f01088f61a01",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "reservations/:id",
+      "responses": [
+        {
+          "uuid": "4149b155-e70d-404d-9061-9162b2f04a41",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "e67d645b-93b5-426e-96df-ffb678af588f"
+    },
+    {
+      "type": "route",
+      "uuid": "41f382c1-ff58-4902-8d1e-45df0864675c"
+    },
+    {
+      "type": "route",
+      "uuid": "ef840577-c234-4e18-bf4e-1a737612fddc"
+    },
+    {
+      "type": "route",
+      "uuid": "79459f71-e570-4435-a3c2-d795355f3bc6"
+    },
+    {
+      "type": "route",
+      "uuid": "48d03cb7-d9de-4281-a3ae-f01088f61a01"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}
